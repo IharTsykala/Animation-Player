@@ -1,0 +1,409 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {  
+  margin: 0 auto;
+  user-select: none;
+}
+
+.wrapper {  
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: grid;  
+  grid-template-rows: 48px 1fr; 
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  color: #a7a7a7;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.header { 
+  width: 100%;  
+  border-bottom: 2px solid #a7a7a7;
+  display: grid;
+  grid-template-columns: 72px 1fr 72px;
+  box-sizing: border-box;
+}
+
+.menu-header {
+  margin-left: 19px;
+  margin-top: 14px;  
+}
+
+.name-header {
+  margin-top: 10px;
+  font-family: Roboto;  
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  color: black;
+}
+
+.setting-header {
+  justify-self: end;
+  margin-right: 20px;
+  margin-top: 12px;  
+}
+
+/* main */
+
+.main {
+  height: 100%;
+  width: 100%; 
+  border: 1px solid #a7a7a7; 
+  display: grid;
+  grid-template-areas:   
+  "rulerColor frames fields rulesAnimation";
+  grid-template-columns: 15% 15% 55% 15%;  
+  align-items: center; 
+}
+
+/* RULER COLOR */
+
+.ruler-color {
+  grid-area: rulerColor;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid #a7a7a7;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);  
+}
+
+.palette-ruler-color {  
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  padding-bottom: 5%;
+  width: 100%;
+  height: 70%;  
+  box-sizing: border-box;
+  margin-top: 10%;
+  border: 1px solid #a7a7a7;  
+}
+
+.palette-ruler-color div:hover {
+  color: black;
+}
+
+.palette-ruler-color div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+  padding-left: 15px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.palette-ruler-color div:nth-child(2) {  
+  border-bottom: 1px solid #7a7a7a;  
+}
+
+/* Colors */
+
+.colors {  
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  padding-bottom: 5%;
+  width: 100%;
+  height: 70%;  
+  box-sizing: border-box;
+  margin-top: 10%;
+  border: 1px solid #a7a7a7;
+}
+
+.colors div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;  
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.colors div div:first-child {
+  padding: 0;  
+  border: 1px solid #7a7a7a;
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.colors div:nth-child(2) {  
+  border-bottom: 1px solid #7a7a7a;
+}
+
+.color-grey div {
+  background-color: grey;
+}
+.color-green div {
+ background-color: green;
+}
+.color-red div {
+ background-color: red;
+}
+.color-blue div {
+background-color: blue;
+}
+.tornOn {
+  border: 1px solid red;
+  font-weight: 600;
+  color: black;
+}
+
+/* FRAMES */
+
+.frames {
+  grid-area: frames;
+  width: 100%;
+  height: 100%;
+  background-color: azure;  
+}
+
+/* fields */
+
+.fields {
+  grid-area: fields;    
+  height: 100%;
+  width: 100%;  
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;  
+}
+
+.fields-container {
+  width: 600px;
+  height: 600px;  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);  
+  position: relative;   
+}
+
+.block1,
+.block2,
+.block3,
+.block4,
+.block5,
+.block6,
+.block7,
+.block8,
+.block9 {
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  border: 1% solid white;  
+  
+}
+
+.block1 {
+  top: 2px;
+  left: 2px;  
+}
+
+.block2 {
+  top: 2px;
+  left: 202px;
+}
+
+.block3 {
+  top: 2px;
+  left: 402px;
+}
+
+.block4 {
+  top: 202px;
+  left: 2px;
+}
+
+.block5 {
+  top: 202px;
+  left: 202px;
+}
+
+.block6 {
+  top: 202px;
+  left: 402px;
+}
+
+.block7 {
+  top: 402px;
+  left: 2px;
+}
+
+.block8 {
+  top: 402px;
+  left: 202px;
+}
+
+.block9 {
+  top: 402px;
+  left: 402px;
+}
+
+.fields div.color-grey {
+  background-color: gray;
+}
+
+.fields div.color-green {
+  background-color: green;
+}
+
+.fields div.color-red {
+  background-color: red;
+}
+
+.fields div.color-blue {
+  background-color: blue;
+}
+
+.fields div.circle {
+  border-radius: 50%;
+}
+
+/* rules-animation */
+
+.rules-animation {
+  grid-area: rulesAnimation;
+  height: 100%;
+  width: 100%;  
+}
+
+.preview-rules-animation {
+  width: 100%;
+  height: 30%;  
+}
+
+
+/* Piskel */
+/* FRAMES */
+
+.list-frames {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: none;
+  width: 100%;  
+}
+
+.frame {  background: none;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid #a7a7a7;  
+}
+
+li.active {
+  background: none;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid black; 
+}
+
+.frame canvas {
+  width: 150;
+  height: 150;  
+}
+
+.delete-canvas-frame {
+  width: 20%;
+  height: 20%;
+  background: black;
+  position: absolute;
+  top:0;
+  right: 0;
+  color: white;
+  cursor: pointer  
+}
+
+.duplicate-canvas-frame {
+  width: 20%;
+  height: 20%;
+  background: black;
+  position: absolute;
+  top:120;
+  right: 0;
+  color: white;
+  cursor: pointer  
+}
+
+.add-frames {
+  width: 80%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: #a7a7a7; 
+  color: black;
+  text-align: center; 
+  cursor: pointer
+}
+
+/* Preview */
+
+.preview-rules-animation {  
+  border: 1px solid black;
+  position: relative;
+}
+
+.show-preview-rules-animation {  
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;    
+}
+
+.speed-preview-pules-animation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #a7a7a7;
+  width: 100%;
+  height: 30px;
+  color: black;
+  margin: 0 auto;
+  justify-items: center;  
+}
+
+.start-animation {
+  cursor: pointer;
+}
+
+.slowly-animation {
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  cursor: pointer
+}
+
+.faster-animation {
+  background-color: green;
+  width: 100%;
+  text-align: center;
+  cursor: pointer
+}
+
+.full-screen-animation {
+  width: 50px;
+  height: 50px;
+  background-color: #7a7a7a;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  z-index: 10;
+  cursor: pointer
+}
